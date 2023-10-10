@@ -1,0 +1,15 @@
+inp_dim : INT The number of input nodes. For our case, the number of input nodes is equal to the number of sites.
+train_fraction : FLOAT Fraction of the total data form the input_file for training purposes.
+test_fraction : FLOAT Fraction of the total data from the test_file for testing purposes.
+hidden_dimension : INT The number of hidden nodes for the training.
+learn_rate : FLOAT Learning rate of the model.
+batch_size : INT Batch size gives the amount of train data in a given batch while training of ANN.
+num_epochs : INT The number of epochs/iterations for training.
+input_file : STR Name of train data file in csv format.
+input_file : STR Name of test data file in csv format.
+
+# How to run
+
+srun --nodes=1 --ntasks-per-node=1  --time=01:00:00 --pty bash -i
+
+python3 ann_ci.py input.in > input.in.out &                             

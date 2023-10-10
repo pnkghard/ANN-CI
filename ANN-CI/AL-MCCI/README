@@ -1,0 +1,14 @@
+#### This you can ignore but the participants has to do
+ module load DL/DL-CondaPy/3.7
+
+f2py3 -L/home/apps/DL/DL-CondaPy3.7/envs/python-packages/lib/ -llapack -c net_nstates.f -m net_nstates
+
+mv net_nstates.xxxxxxx net_nstates.so
+
+
+############ below all shold do
+conda activate python-packages
+
+srun --nodes=1 --ntasks-per-node=2 --gres=gpu:1 --partition=gpu --time=01:00:00 --reservation=<reservation_names> --pty bash -i
+
+python exe.py test.in &

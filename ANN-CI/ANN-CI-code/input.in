@@ -1,0 +1,11 @@
+***startSetup***
+inp_dim,18
+train_fraction,1.0
+test_fraction,1.0
+hidden_dimension,20
+learn_rate,0.001
+batch_size,500
+num_epochs,50
+input_file,input_train_18sites.csv
+test_file,18fciDet_cutoff.csv
+***endSetup***
